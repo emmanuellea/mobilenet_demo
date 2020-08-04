@@ -34,7 +34,7 @@ PEOPLE_FOLDER=os.path.join('static', 'people_photo')
 
 app.config['UPLOAD_FOLDER']=PEOPLE_FOLDER
 
-file_path = 'C:/Users/Emmanuel/Desktop/bean/static/people_photo'
+file_path = '../static/people_photo'
 
 
 @app.route('/')
@@ -44,7 +44,7 @@ def index():
 @app.route('/process', methods=['GET', 'POST'])
 def process():
     
-    model=load_model('C:/Users/Emmanuel/Desktop/bean/static/people_photo/mobilenet.h5')
+    model=load_model('../static/people_photo/mobilenet.h5')
     if request.method=='POST':
         f=request.files['image']
         
